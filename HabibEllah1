@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Djeffal Habib Ellah - English Trainer</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f2e4d8; /* Background color */
+            color: #333; /* Default text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            background-image: url('https://i.imgur.com/cmBjhlw.jpeg');
+            background-size: cover;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: relative; /* Allow absolute positioning of the logo */
+        }
+
+        .logo {
+            position: absolute;
+            left: 140px; /* Move logo 7cm (approximately 140px) to the right */
+            top: 20px; /* Distance from the top edge */
+            width: 150px; /* Logo size (25% smaller than 200px) */
+            height: auto;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column; /* Stack name and profession vertically */
+            align-items: center; /* Center align the text */
+            justify-content: center;
+            margin-left: 120px; /* Margin to the left to avoid overlap with the logo */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff; /* White color for name */
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 5px 0 20px;
+            color: #fff; /* White color for profession */
+        }
+
+        .header-background {
+            background-color: #D2B48C; /* Light brown color */
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .horizontal-menu {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            width: 30%;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .content {
+            display: flex;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .about {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #D2B48C; /* Brown background */
+            margin-right: 20px;
+        }
+
+        .about img {
+            width: 250px; /* Wider image */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .welcome p {
+            font-size: larger; /* Increased font size */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="https://i.imgur.com/cmBjhlw.jpeg" alt="Logo"> <!-- Resized logo -->
+        <div class="header-content">
+            <h1>Mr. Djeffal Habib Ellah</h1>
+            <h2>Professional Certified English Trainer / Content Creator</h2>
+        </div>
+    </header>
+
+    <div class="header-background"></div> <!-- Light brown background under name and profession -->
+
+    <div class="horizontal-menu">
+        <div class="section" onclick="toggleDropdown('enrollment-dropdown')">
+            <h3>Enrollment</h3>
+            <div id="enrollment-dropdown" class="dropdown">
+                <p>General English starting from A1 and up.</p>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJAf1xXJ_YaljEubDLBZ8ivIi0W8xY-QqTeMYwqiXi3kPU4w/viewform">A1 Beginner</a></p>
+                <p><a href="https://docs.google.com/forms/d/13Ted-NYp7N9BydZoNUSBPJRw3RUeOKXV3LF3BGMhtpA">A2 Elementary</a></p>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScjQ20c_LKk4K_rskR8h2PfCRy_QSjVVz0KYDmauCDIcVzt8A/viewform">Intermediate (B1) and up</a></p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleDropdown('bac-dropdown')">
+            <h3>BAC/BEM Courses</h3>
+            <div id="bac-dropdown" class="dropdown">
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9fG2j6kRXX5SOPR8fR2MCF_8rfFdgnzOv0-s3OCgLADBRxQ/viewform">Enroll for BAC/BEM Online Courses</a></p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleDropdown('contact-dropdown')">
+            <h3>Contact Information</h3>
+            <div id="contact-dropdown" class="dropdown">
+                <p>Whatsapp: +213556755417 / +213668120123</p>
+                <p>Email: <a href="mailto:djustme1995@yahoo.com">djustme1995@yahoo.com</a></p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleDropdown('social-dropdown')">
+            <h3>Social Media</h3>
+            <div id="social-dropdown" class="dropdown">
+                <p>Instagram: <a href="https://www.instagram.com/habib_ellah_official/">habib_ellah_official</a></p>
+                <p>Facebook: <a href="https://web.facebook.com/profile.php?id=100012888423136">Profile</a></p>
+                <p>TikTok: <a href="https://www.tiktok.com/@habibthepanda">habibthepanda</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="about">
+            <img src="https://i.imgur.com/JwQdbcK.jpeg" alt="Mr. Djeffal Habib Ellah">
+            <p style="font-size: medium;">I graduated from ENS Bouzeriah as a teacher of English and I have a master’s degree in Linguistics. I have taught all ranges of ages and specialized in every aspect of the English language from kids to adults, from general English to business English. You name it.</p>
+        </div>
+
+        <div class="welcome">
+            <h3>Welcome Message</h3>
+            <p>
+                أهلا ومرحبا! يسعدني وجودك هنا. سواء كنت بدأت رحلتك لإتقان اللغة الإنجليزية أو تتطلع إلى تحسين مهاراتك، فقد وصلت إلى المكان الصحيح.
+                <br><br>
+                باعتباري مدربًا متخصصًا في اللغة الإنجليزية، فإن هدفي هو تزويدك بدروس فعالة وتفاعلية تجعل التعلم ممتعًا وعمليًا لتلبية احتياجاتك اليومية. من خلال التعليمات الشخصية، أهدف إلى تمكينك من التحدث والكتابة وفهم اللغة الإنجليزية بثقة.
+                <br><br>
+                لا تتردد في استكشاف الموارد، أو التسجيل في الدورات أونلين، أو التواصل مع أي أسئلة. أنا هنا لدعمك في كل خطوة على الطريق!
+                <br><br>
+                Hello and welcome! I’m thrilled to have you here. Whether you're just starting your journey to master English or looking to fine-tune your skills, you've come to the right place.
+                <br><br>
+                As a dedicated English trainer, my goal is to provide you with engaging, effective, and interactive lessons that make learning enjoyable and practical for your everyday needs. Through personalized instruction, I aim to empower you to speak, write, and understand English with confidence.
+                <br><br>
+                Feel free to explore the resources, enroll in a class, or reach out with any questions. I’m here to support you every step of the way!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
